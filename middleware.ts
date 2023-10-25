@@ -17,7 +17,7 @@ export const middleware=async(request:NextRequest)=>{
         }
 
         if(!token){
-            return NextResponse.redirect("http://localhost:3000/Login")
+            return NextResponse.redirect("my-quiz-eight.vercel.app/Login")
 
         }
 
