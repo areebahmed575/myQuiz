@@ -6,7 +6,7 @@ import { getJwtSecretKey } from "./app/lib/auth";
 export const middleware=async(request:NextRequest)=>{
     const token=request.cookies.get("user-token")?.value
     const {pathname,origin}=request.nextUrl
-    console.log(token)
+    
     try{
         if(pathname === "/Login"){
 
@@ -21,11 +21,7 @@ export const middleware=async(request:NextRequest)=>{
 
         }
 
-        if(token){
-            if (request.nextUrl.pathname.startsWith('/Login')) {
-                return NextResponse.rewrite(new URL('/', request.url))
-              }
-        }
+        
        
 
         
